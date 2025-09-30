@@ -12,7 +12,7 @@
                             </div>
                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                 <h6 class="text-muted font-semibold">Laporan Pending</h6>
-                                <h6 class="font-extrabold mb-0">{{ $CountLaporanPending }}</h6>
+                                <h6 class="font-extrabold mb-0">{{ $laporanPending }}</h6>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                 <h6 class="text-muted font-semibold">Laporan Proses</h6>
-                                <h6 class="font-extrabold mb-0">{{ $CountLaporanProses }}</h6>
+                                <h6 class="font-extrabold mb-0">{{ $laporanProses }}</h6>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                 <h6 class="text-muted font-semibold">Laporan Selesai</h6>
-                                <h6 class="font-extrabold mb-0">{{ $CountLaporanSelesai }}</h6>
+                                <h6 class="font-extrabold mb-0">{{ $laporanSelesai }}</h6>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                 <h6 class="text-muted font-semibold">Total Laporan</h6>
-                                <h6 class="font-extrabold mb-0">{{ $CountLaporanTotal }}</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalLaporan }}</h6>
                             </div>
                         </div>
                     </div>
@@ -74,74 +74,25 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Laporan per Bulan ({{ date('Y') }})</h4>
+                        <h4>Profile Visit</h4>
                     </div>
                     <div class="card-body">
-                        <div id="chart-laporan-bulanan"></div>
+                        <div id="chart-profile-visit"></div>
                     </div>
                 </div>
-
-                <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                <script>
-                    document.addEventListener("livewire:navigated", function() {
-                        var options = {
-                            chart: {
-                                type: 'bar',
-                                height: 350,
-                                stacked: false
-                            },
-                            series: [{
-                                    name: 'Proses',
-                                    data: @json($laporanProses),
-                                    color: '#facc15' // kuning
-                                },
-                                {
-                                    name: 'Pending',
-                                    data: @json($laporanPending),
-                                    color: '#ef4444' // merah
-                                },
-                                {
-                                    name: 'Selesai',
-                                    data: @json($laporanSelesai),
-                                    color: '#22c55e' // hijau
-                                }
-                            ],
-                            xaxis: {
-                                categories: [
-                                    'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
-                                    'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'
-                                ]
-                            },
-                            plotOptions: {
-                                bar: {
-                                    horizontal: false,
-                                    columnWidth: '60%',
-                                }
-                            },
-                            dataLabels: {
-                                enabled: true
-                            }
-                        };
-
-                        var chart = new ApexCharts(document.querySelector("#chart-laporan-bulanan"), options);
-                        chart.render();
-                    });
-                </script>
-
             </div>
         </div>
     </div>
-
     <div class="col-12 col-lg-3">
         <div class="card">
             <div class="card-body py-4 px-4">
                 <div class="d-flex align-items-center">
                     <div class="avatar avatar-xl">
-                        <img src="{{ asset('storage/' . $auth->foto) }}" alt="Face 1">
+                        <img src="./assets/compiled/jpg/1.jpg" alt="Face 1">
                     </div>
                     <div class="ms-3 name">
-                        <h5 class="font-bold">{{ $auth->name }}</h5>
-                        <h6 class="text-muted mb-0">{{ $auth->no_whatsapp }}</h6>
+                        <h5 class="font-bold">John Duck</h5>
+                        <h6 class="text-muted mb-0">@johnducky</h6>
                     </div>
                 </div>
             </div>

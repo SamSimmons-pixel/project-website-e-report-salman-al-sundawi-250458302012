@@ -36,6 +36,9 @@ Route::middleware('auth')
         Route::get('/list-laporan', Features\ListLaporan::class)->name('admin.list-laporan');
         Route::get('/list-warga', Features\ListWarga::class)->name('admin.list-warga');
         Route::get('/profile', Features\MyProfile::class)->name('admin.profile');
+
+        // Detail
+        Route::get('/laporan/detail/{id}', Features\Admin\LaporanDetail::class)->name('admin.detail-laporan');
 });
 
 

@@ -32,8 +32,7 @@
                             </td>
                             <td>{{ $laporan->pelapor->name }}</td>
                             <td>
-                                {{-- <a href="{{ route('edit-laporan', $laporan->id) }}" class="btn btn-primary">Edit</a>
-                                <a href="{{ route('delete-laporan', $laporan->id) }}" class="btn btn-danger">Delete</a> --}}
+                                <a href="{{ route('admin.detail-laporan', $laporan->id) }}" class="btn btn-primary">Detail</a>
                             </td>
                         </tr>
                     @empty
