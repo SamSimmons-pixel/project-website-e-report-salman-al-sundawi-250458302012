@@ -34,12 +34,19 @@
                     <h1 class="text-xl font-bold">Bersama Membangun Negeri</h1>
                 </div>
                 <nav class="hidden md:flex space-x-6">
-                    <a href="#beranda" class="hover:text-secondary transition-colors">Beranda</a>
+                    @auth
+                        @if (Auth::user()->role == 'admin')
+                            <a href="{{ route('admin.dashboard') }}" class="hover:text-secondary transition-colors">Dashboard</a>
+                        @elseif (Auth::user()->role == 'masyarakat')
+                            <a href="{{ route('warga.dashboard')}} " class="hover:text-secondary transition-colors">Dashboard</a>
+                        @endif
+                    @endauth
                     <a href="#cara-pengaduan" class="hover:text-secondary transition-colors">Cara Pengaduan</a>
                     <a href="#jenis-pengaduan" class="hover:text-secondary transition-colors">Jenis Pengaduan</a>
                     <a href="#faq" class="hover:text-secondary transition-colors">FAQ</a>
                     <a href="#berdonasi" class="hover:text-secondary transition-colors">Berdonasi</a>
-                    <a href="#kontak" class="hover:text-secondary transition-colors">Kontak</a>
+                    <a href="{{ route('login') }}" class="hover:text-secondary transition-colors font-bold">{{ Auth::user() ? 'Ganti akun' : 'Login' }}</a>
+
                 </nav>
                 <button class="md:hidden text-white">
                     <i class="fas fa-bars text-xl"></i>

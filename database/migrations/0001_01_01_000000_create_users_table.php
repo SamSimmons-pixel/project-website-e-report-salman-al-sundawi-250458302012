@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('no_whatsapp');
             $table->string('foto')->nullable();
             $table->text('alamat')->nullable();
-            $table->enum('role', ['admin', 'masyarakat'])->default('masyarakat');
+            $table->enum('role', ['admin', 'masyarakat'])->default('masyarakat')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
