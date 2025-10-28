@@ -36,7 +36,7 @@ class Login extends Component
                 return redirect()->route('admin.dashboard');
             } else {
                 return redirect()->route('warga.dashboard');
-            }
+            }   
         }
 
         $this->addError('name', 'The provided credentials do not match our records.');
