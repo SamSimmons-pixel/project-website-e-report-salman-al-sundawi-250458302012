@@ -24,7 +24,7 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
 
 1.  **Clone repositori ini:**
     ```bash
-    git clone [URL_REPOSITORI_ANDA]
+    git clone https://github.com/SamSimmons-pixel/project-website-e-report-salman-al-sundawi-250458302012.git
     cd [NAMA_DIREKTORI_PROYEK]
     ```
 
