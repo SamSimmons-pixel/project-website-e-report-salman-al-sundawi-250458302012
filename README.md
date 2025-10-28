@@ -1,5 +1,3 @@
-Tentu, ini adalah `README.md` yang sudah diperbarui dengan tambahan emoji agar terlihat lebih menarik dan asik\! 🎉
-
 -----
 
 # 📢 Portal Pengaduan Masyarakat
