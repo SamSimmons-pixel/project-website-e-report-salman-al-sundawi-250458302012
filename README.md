@@ -77,8 +77,8 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan proyek ini di li
 
     Akun default:
 
-      - **Admin** 👨‍💻: `admin@gmail.com` | password: `admin`
-      - **Warga** 🙍‍♂️: `masyarakat@gmail.com` | password: `masyarakat`
+      - **Admin** 👨‍💻: `admin` | password: `admin`
+      - **Warga** 🙍‍♂️: `masyarakat` | password: `masyarakat`
 
 7.  **Jalankan server pengembangan:** 🔥
     Gunakan skrip dari `composer.json` untuk menjalankan semua layanan yang dibutuhkan secara bersamaan (server PHP, Vite, dan queue).
